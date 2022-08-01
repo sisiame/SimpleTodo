@@ -15,12 +15,8 @@ The following **required** functionality is completed:
 
 The following **optional** features are implemented:
 
-- [x] User can delete a task by long pressing on task
-- [x] User can edit a task by double tapping on the task
-
-The following **research-based improvements** are implemented:
-
-* [x] User can use SharedPreferences to save previously added list items
+- [ ] User can delete a task by long pressing on task
+- [ ] User can edit a task by double tapping on the task
 
 The following **additional** features are implemented:
 
