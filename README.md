@@ -20,7 +20,8 @@ The following **optional** features are implemented:
 
 The following **research-based improvements** are implemented:
 
-* [x] User can use SharedPreferences to save previously added list items
+* [x] User can save added list items to a file
+* [x] User can load files with to retrieve previously saved lists
 
 The following **additional** features are implemented:
 
