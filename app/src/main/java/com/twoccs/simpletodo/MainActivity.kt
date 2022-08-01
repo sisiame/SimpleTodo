@@ -14,8 +14,8 @@ import java.nio.charset.Charset
 
 class MainActivity : AppCompatActivity() {
 
-    var listOfTasks = mutableListOf<String>()
-    lateinit var adapter: TaskItemAdapter
+    private var listOfTasks = mutableListOf<String>()
+    private lateinit var adapter: TaskItemAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,18 +24,10 @@ class MainActivity : AppCompatActivity() {
         val onLongClickListener = object : TaskItemAdapter.OnLongClickListener {
 
             override fun onItemLongClicked(position: Int) {
-                // Remove the item from the list
-                listOfTasks.removeAt(position)
-                // Notify the adapter that our data set has changed
-                adapter.notifyDataSetChanged()
-                // Save list of items
-                saveItems()
+                // the code to remove an item from the list would go here
             }
 
         }
-
-        // Load list of items
-        loadItems()
 
         // Look up recyclerView in layout
         val recyclerView = findViewById<RecyclerView>(R.id.tasksList)
@@ -65,58 +57,7 @@ class MainActivity : AppCompatActivity() {
 
             // Reset text field
             addTaskField.setText("")
-
-            // Save the items to the file
-            saveItems()
         }
-
-    }
-
-    // Save the data that the user has inputted
-    // Save data by writing and reading from a file
-
-    /**
-     * Get the file we need
-     */
-    private fun getDataFile() : File {
-        // Every line is going to represent a specific task in our list of tasks
-        return File(filesDir, "data.txt")
-    }
-
-    /**
-     * Load the items by reading every line in the data file
-     */
-    private fun loadItems() {
-
-        try {
-            listOfTasks = FileUtils.readLines(getDataFile(), Charset.defaultCharset())
-        } catch(ioException: IOException) {
-            ioException.printStackTrace()
-        }
-
-    }
-
-    /**
-     * Save items by writing them into our data file
-     */
-    fun saveItems() {
-
-        try {
-            FileUtils.writeLines(getDataFile(), listOfTasks)
-        } catch(ioException: IOException) {
-            ioException.printStackTrace()
-        }
-
-    }
-
-    /**
-     * Launch edit text intent
-     */
-    fun editItem(pos: Int) {
-
-        val editIntent = Intent(this@MainActivity, EditTextActivity::class.java)
-        editIntent.putExtra("item", listOfTasks.get(pos))
-        startActivity(editIntent)
 
     }
 

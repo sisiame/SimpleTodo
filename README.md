@@ -1,22 +1,26 @@
-# Project 1 - *Simple Todo*
-
-**Simple Todo** is an android app that allows building a todo list and basic todo items management functionality including adding new items, editing and deleting an existing item.
+# Android Project 2 - *Simple Todo*
 
 Submitted by: **Sisiame B. Sakasamo**
 
+**Simple Todo** is a simple task tracker app to let users keep track of their ToDo list.
+
 Time spent: **1** hours spent in total
 
-## User Stories
+## Required Features
 
 The following **required** functionality is completed:
 
-* [x] User can **view a list of todo items**
-* [x] User can **successfully add and remove items** from the todo list
-* [x] User's **list of items persisted** upon modification and and retrieved properly on app restart
+- [x] **User can add a task to a list of tasks**
+- [x] **User can see their list of tasks based on previously inputted tasks**
 
 The following **optional** features are implemented:
 
-* [ ] User can **tap a todo item in the list and bring up an edit screen for the todo item** and then have any changes to the text reflected in the todo list
+- [x] User can delete a task by long pressing on task
+- [x] User can edit a task by double tapping on the task
+
+The following **research-based improvements** are implemented:
+
+* [x] User can use SharedPreferences to save previously added list items
 
 The following **additional** features are implemented:
 
@@ -25,12 +29,6 @@ The following **additional** features are implemented:
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
-
-https://youtu.be/0PRmKDrIDE4
-
-## Notes
-
-Kotlin is an unfamiliar program to me, though knowing Java and how to develop in Android Studio ahead of time helped. Familiarize self with Kotlin.
 
 ## License
 

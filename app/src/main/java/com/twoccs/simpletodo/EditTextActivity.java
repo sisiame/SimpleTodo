@@ -3,6 +3,7 @@ package com.twoccs.simpletodo;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+import android.view.View;
 
 public class EditTextActivity extends AppCompatActivity {
 
